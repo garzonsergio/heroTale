@@ -1,0 +1,549 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62,5%;
+    
+    --green-deepest-jungle:#134532;
+    --green-deeper-jungle:#18563E;
+    --green-jungle: #258661;
+    --green-far-1: #2ea879;
+    --green-far-2: #58B994;
+    --green-far-3: #79C7A9;
+    --green-far-4: #94D2BA;
+    --blue-sky-1: #0b525b;
+    --blue-sky-2: #006466;
+    --blue-sky-3: #94d2ba;
+    --wood-house: #f4f1de;
+    --grey-windows: #353635;
+    --wood-floor: #d4a373;
+    --brown-dog1: #644437;
+    --brown-dog2:  #493125;
+    --brown-dog3: #f8a643;
+    --nose: #111;
+    
+}
+
+.mountains {
+    position: relative;
+    width: 100vw;
+    background-color: black;
+           
+}
+
+
+.sky {
+    position: relative;
+    width: 100vw;
+    height: 6rem;
+    background: linear-gradient(180deg, white 0%, var(--blue-sky-3) 100%);
+
+}
+
+.mountain {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+  
+}
+
+.m1 {
+    position: absolute;
+    width: 100%;
+    margin-top: 0rem;
+    background: linear-gradient(180deg, var(--blue-sky-3) 0%, var(--blue-sky-2) 67%, var(--blue-sky-1) 100%);
+    
+    animation: darkness 5s ease-in forwards;
+    animation-delay: 3s;
+}
+
+
+.house {
+    z-index: 2;
+    position: relative;
+    top: 5rem;
+}
+.roof{
+    z-index: 3;
+    position: absolute;
+    width: 11rem;
+    border-right: 0.6rem solid transparent;
+    border-bottom: 1rem solid #a68a64;
+    bottom: -12rem;
+}
+.wall {
+    z-index: 4;
+    position: absolute;
+    width: 10rem;
+    height:3.5rem;
+    background-color: #e5e5f7;
+    
+    background-size: 20px 20px;
+    background-image:  repeating-linear-gradient(to right, var(--wood-floor), var(--wood-floor) 0.05rem, var(--wood-house) 0.05rem, var(--wood-house));
+    bottom: -15.5rem;
+}
+
+.window {
+    position: absolute;
+    opacity: 0.9;
+    background: var(--grey-windows);
+}
+
+.wsquare {
+    height: 1.1rem;
+    width: 1.1rem;
+    right: 1rem;
+    top: 1rem;
+}
+
+.wrectangle{
+    height: 1rem;
+    width: 4.5rem;
+    top: 0.9rem;
+}
+
+.door{
+    position: absolute;
+    background: var(--grey-windows);
+    height: 2.7rem;
+    width:1.3rem;
+    bottom: 0;
+    right: 3rem;
+    opacity: 0.9;
+}
+
+.pl1{
+    position: absolute;
+    width: 4.5rem;
+    top: 1.9rem;
+}
+
+.pl2{
+    position: absolute;
+    width: 1.1rem;
+    right: 1rem;
+    top: 1.4rem;
+
+}
+
+.pl3{
+    position: absolute;
+    height: 2.7rem;
+    width:1.3rem;
+    top: 0.15rem;
+    right: 3rem;
+
+
+}
+
+.floor{
+    position: relative;
+}
+
+.support{
+    position:absolute;
+    background: var(--wood-floor);
+}
+
+.base {
+    width:12rem;
+    height: 0.7rem;
+    bottom: -16.2rem;
+}
+
+.sup1 {
+    height: 8rem;
+    width:0.5rem;
+    left: 2.6rem;
+    bottom: -24rem;
+
+}
+
+.sup2 {
+    height: 8rem;
+    width:0.5rem;
+    left: 6.5rem;
+    bottom: -24rem;
+
+}
+
+.sup3 {
+    height: 8rem;
+    width:0.5rem;
+    left: 10rem;
+    bottom: -24rem;
+
+}
+
+
+.xs1{
+
+    height: 3.5rem;
+    width:0.5rem;
+    left: 8.2rem;
+    bottom: -22rem;
+    transform: skew(45deg);
+
+}
+
+.xs2{
+
+    height: 3.5rem;
+    width:0.5rem;
+    left: 8.2rem;
+    bottom: -22rem;
+    transform: skew(-45deg);
+
+}
+
+.xs3{
+
+    height: 2rem;
+    width:0.5rem;
+    left: 1.2rem;
+    bottom: -21rem;
+    transform: skew(-45deg) rotate(45deg);
+
+}
+
+.xs4{
+
+    height: 2rem;
+    width:0.5rem;
+    left: 1.2rem;
+    bottom: -22rem;
+    transform: skew(45deg) rotate(135deg);
+    
+
+}
+
+.river{
+    position: relative;
+    width: 100vw;
+    height: 40rem;
+    
+    overflow: hidden;
+    
+}
+
+div .wave {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: url(wave2.png);
+    background-size: 15rem 3.5rem;
+
+}
+
+
+div .wave.wave1 {
+    position: absolute;
+    animation: animate 35s linear infinite;
+    z-index: 1;
+    opacity: 1;
+    top: 17.3rem;
+}
+
+@keyframes animate {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 66.7rem;
+    }
+}
+
+div .wave.wave2 {
+    
+    animation: animate2 30s linear infinite;
+    z-index: 1;
+    opacity: 0.7;
+    top: 18rem ;
+}
+
+
+@keyframes animate2 {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 66.7rem;
+    }
+}
+
+div .wave.wave3 {
+    
+    animation: animate3 20s linear infinite;
+    z-index: 4;
+    opacity: 0.5;
+    top: 18.8rem ;
+    
+}
+
+
+@keyframes animate3 {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 66.7rem;
+    }
+}
+
+div .wave.wave4 {
+    
+    animation: animate4 15s linear infinite;
+    z-index: 4;
+    opacity: 1;
+    top: 19.6rem ;
+    
+}
+
+
+@keyframes animate4 {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 66.7rem;
+    }
+}
+
+.bottom-river{
+    position: absolute;
+    z-index: 30;
+    height: 8rem;
+    width: 100%;
+    top: 23.09rem;
+    background: var(--blue-sky-2) ;
+    opacity: 0.7;
+}
+
+.hero {
+    position: relative;
+    bottom: 1rem;
+    
+}
+
+.chest{
+    z-index: 34;
+    position: absolute;
+    height: 1.6rem;
+    width:0.7rem;
+    background: yellow;
+    top:19rem;
+    left:10.6rem;
+    border-radius: 30% 40% 10% 0;
+}
+
+.head{
+    z-index: 35;
+    position: absolute;
+    height: 0.6rem;
+    width: 0.6rem;
+    border-radius: 50%;
+    background: yellowgreen;
+    top:18.5rem;
+    left:10.6rem;
+}
+
+.right-arm {
+    z-index: 36;
+    position: absolute;
+    height: 0.7rem;
+    width: 0.18rem;
+    transform: skew(30deg);
+    background: red;
+    top:19.8rem;
+    left:11rem;
+
+    animation: stroke-dog 1s ease-in-out infinite;
+
+}
+
+@keyframes stroke-dog {
+    0%{
+            
+
+    }
+    50%{
+        transform: rotate(-30deg) ;
+        transform-origin: 0 0 0;
+    }
+    
+    100%{
+        transform: rotate(-10deg);
+        transform-origin: 0 0 0;
+    }
+    
+}
+
+.right-forearm {
+    z-index: 36;
+    position: absolute;
+    height: 0.5rem;
+    width: 0.2rem;
+    background: red;
+    top:19.4rem;
+    left:10.8rem;
+
+    animation: stroke-dog 1s ease-in-out infinite;
+}
+.right-leg{
+    z-index: 37;
+    position: absolute;
+    height: 0.9rem;
+    width: 0.5rem;
+    background: red;
+    top:20.6rem;
+    left:10.7rem;
+}
+
+.dog {
+    position: relative;
+    top: 5rem;
+    z-index: 38;
+    
+  }
+  
+.dog-head {
+    z-index: 39;
+    position: absolute ;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--brown-dog1);
+    top: 14rem;
+    left: 11.5rem;
+    
+  }
+  
+.nose {
+    position: absolute;
+    left:0.35rem ;
+    top: 0.25rem;
+    background: var(--brown-dog1);
+    width: 0.35rem;
+    height: 0.25rem;
+    border-radius: 0 0 50% 0;
+  }
+  
+.nose::after {
+    position: absolute;
+    background: var(--nose);
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    top: -0.05rem;
+    left: 0.3rem;
+  }
+  
+.ear {
+    background: var(--brown-dog1);
+    width: 0.2rem;
+    height: 0.4rem;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    border-radius: 0 0 0 0.4rem;
+    border-left: 0.3rem solid var(--brown-dog2);
+  }
+  
+.body {
+    width: 1.1rem;
+    position: absolute;
+    height: 1.2rem;
+    background: var(--brown-dog1);
+    top: 14.3rem;
+    left: 10.8rem;
+    border-radius: 1.5rem 0 0 0;
+    
+  }
+      
+  
+.paw {
+    
+    position: absolute;
+    bottom:0;
+    left:0.9rem;
+    height: 0.7rem;
+    width: 0.2rem;
+    background: var(--brown-dog2);
+    border-radius: 0.2rem 0 0 0 ;
+  }
+
+.paw2 {
+    
+    position: absolute;
+    width: 0.5rem;
+    height: 0.25rem;
+    background: var(--brown-dog1);
+    top: 0.95rem;
+    left: 0.9rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+  }
+
+.tail {
+    position: absolute;
+    width: 0.3rem;
+    height: 1rem;
+    background: var(--brown-dog2);
+    left: -0.2rem;
+    border-radius: 0.5rem 0 0 0.5rem / 1rem 0 0 1rem;
+
+    animation: happy-tail 0.5s ease-in-out infinite;
+ }
+
+@keyframes happy-tail {
+    0%{
+        transform: rotate(-30deg);
+        transform-origin: 0 100% 0;
+
+    }
+    100%{
+        transform: rotate(0deg);
+        transform-origin: 0 100% 0;
+
+    }
+    
+}
+
+ .scene-1 {
+    
+    animation: zoom-in-out 3s ease-in-out forwards;
+        
+ }
+
+ @keyframes zoom-in-out {
+    0%{
+        transform: scale(100%) translateX(0);
+    }
+    50%{
+        transform: scale(150%) translateX(15%);
+    }
+    100%{
+        transform: scale(150%) translateX(15%) translateY(15%);
+    }
+ }
+
+ .sky {
+
+    animation: darkness 5s ease-in forwards;
+    animation-delay: 3s;
+
+ }
+
+ @keyframes darkness {
+     0%{
+        
+     }
+     100%{
+        filter: grayscale(1);
+     }
+ }
